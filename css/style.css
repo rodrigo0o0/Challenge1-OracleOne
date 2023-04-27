@@ -43,7 +43,7 @@ body{
     display: flex;
     margin: 16px 0;
     align-items: center;
-    gap: 1px;
+    gap: 8px;
 
 }
 .principal__aviso{
@@ -85,6 +85,9 @@ body{
     margin-bottom: 1em;
 
 }
+.resultado__pessoa{
+    display: none;
+}
 .principal__texto__aviso{
     text-align: center;
     color: var(--cinza-escuro);
@@ -97,6 +100,7 @@ body{
     margin: 24px 16px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+    flex-direction: column;
 
 }
 
@@ -115,4 +119,94 @@ body{
 
 .botao_copiar{
     color: var(--azul);
+    width: 90%;
+}
+
+
+@media (min-width: 768px){
+    .logo-alura{
+        margin:75px 0 0 40px;
+    }
+    .principal__decodificar{
+        height: 600px;
+    }
+
+    .principal__botoes_container{
+        display: flex;
+        gap: 8px;
+        margin-bottom: 64px;
+        
+    }
+    .botao__branco,.botao__azul{
+        flex-grow: 50;
+        padding: 24px;
+        
+    }
+}
+
+@media (min-width: 1440px){
+    .logo-alura{
+        position: absolute;
+        left: 84px;
+        top:40px;
+    }
+    .programa{
+        display: flex;
+        justify-content: space-around;
+        gap: 80px;
+    }
+    .programa__txt_botoes{
+        margin: 168px 0 0 240px ;
+        width: 680px;
+    }
+    .principal_container_descodificado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 32px;
+        width: 400px;
+        margin: 40px;
+        height: 87%;
+    }
+    .resultado__pessoa{
+        transition: 600ms;
+        display: block;
+    }
+
+    
+    .principal__botoes_container{
+        gap: 24px;
+        margin-bottom: 64px;
+        
+    }
+
+    .txt_resultado{
+        width: 400px;
+
+    }
+    .programa__txt_botoes{
+        width: 80%;
+        
+    }
+    .principal__resultado{
+        height: 90%;
+        flex-direction: column;
+        
+
+    }
+    .botao__branco{
+        transition: 500ms;
+    }
+    .botao__azul{
+        transition: 500ms;
+    }
+    .botao__branco:hover {
+        background: var(--azul);
+        color: var(--branco);
+    }
+    .botao__azul:hover {
+        background: var(--branco);
+        color: var(--azul);
+    }
 }
